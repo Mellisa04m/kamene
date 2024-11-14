@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jewels' Jewelry Store</title>
+</head>
+<body>
+    <header>
+        <h1>Jewels' Jewelry Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/e4/a6/29/e4a6295abe03b808e5a08b401abd73f5.jpg" alt="Gold Ring">
+            <h3>Gold Ring</h3>
+            <p>Ksh 700.00</p>
+            <button onclick="addToCart('Gold Ring', 700.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/94/ea/60/94ea6094531727d45b634c418afa33d7.jpg" alt="Bohemian Rope Chain Bracelet">
+            <h3>Bohemian Rope Chain Bracelet</h3>
+            <p>Ksh 299.99</p>
+            <button onclick="addToCart('Bohemian Rope Chain Bracelet', 299.99)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/2d/ed/26/2ded268d3f977b922d7926f5e115dc47.jpg" alt="Gold Rings">
+            <h3>Gold Rings</h3>
+            <p>Ksh 350.00</p>
+            <button onclick="addToCart('Gold Rings', 350.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/d9/7e/60/d97e600e711201920a70252e4ba39dc7.jpg" alt="Gigi Anklet">
+            <h3>Gigi Anklet</h3>
+            <p>Ksh 2,000.00</p>
+            <button onclick="addToCart('Gigi Anklet', 2000.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/736x/ee/46/46/ee4646ba95377cf92c0590212fc20c10.jpg" alt="Gold Necklace">
+            <h3>Gold Necklace</h3>
+            <p>Ksh 3,500.00</p>
+            <button onclick="addToCart('Gold Necklace', 3500.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/60/79/bb/6079bb2a64fcf759be498d2b2ec1cd9f.jpg" alt="Rose Long">
+            <h3>Rose Long</h3>
+            <p>Ksh 1,500.00</p>
+            <button onclick="addToCart('Rose Long', 1500.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/e2/50/c1/e250c1ebf2ad75261087bdd6fe1527c3.jpg" alt="Perry Necklace">
+            <h3>Perry Necklace</h3>
+            <p>Ksh 2,000.00</p>
+            <button onclick="addToCart('Perry Necklace', 2000.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/7d/7d/1d/7d7d1d5058cc5a58af35410953914712.jpg" alt="Line Drop Earring">
+            <h3>Line Drop Earring</h3>
+            <p>Ksh 2,000.00</p>
+            <button onclick="addToCart('Line Drop Earring', 2000.00)">Add to Cart</button>
+        </div>
+    </section>
+    <section id="order">
+        <h2>Make an Order</h2>
+        <div id="cart">
+            <h3>Your Cart</h3>
+            <div id="cart-content">
+                <p>Your cart is empty.</p>
+            </div>
+        </div>
+        <form id="order-form" action="#" method="post">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+    
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <button type="button" onclick="placeOrder()">Place Order</button>
+        </form>
+    </section>
+    
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Kspamzy Jewelry Store, your premier destination for exquisite and unique jewelry pieces.</p>
+        <p>Each piece in our collection is crafted with precision and care, using the finest materials to ensure durability and elegance..</p>
+        <p>Thank you for choosing Kspamzy Jewelry Store. We look forward to helping you find the perfect piece that tells your story.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us using the form below:</p>
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 Kspamzy Jewelry Store. All rights reserved.</p>
+    </footer>
+
+</body>
+<script>
+    let cart = [];
+let totalPrice = 0;
+
+// Function to add items to the cart
+function addToCart(productName, productPrice) {
+    const existingProduct = cart.find(item => item.name === productName);
+    
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ name: productName, price: productPrice, quantity: 1 });
+    }
+
+    totalPrice += productPrice;
+    updateCartDisplay();
+}
+
+// Function to update the cart display
+function updateCartDisplay() {
+    const cartContent = document.getElementById('cart-content');
+    cartContent.innerHTML = ''; // Clear current cart content
+
+    if (cart.length === 0) {
+        cartContent.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        cart.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.textContent = `${item.name} - Ksh ${item.price.toFixed(2)} (Quantity: ${item.quantity})`;
+            cartContent.appendChild(itemElement);
+        });
+
+        const totalElement = document.createElement('div');
+        totalElement.textContent = `Total Price: Ksh ${totalPrice.toFixed(2)}`;
+        cartContent.appendChild(totalElement);
+    }
+
+    document.getElementById('total').textContent = totalPrice.toFixed(2);
+}
+
+// Function to place an order
+function placeOrder() {
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add items to your cart before placing an order.");
+        return;
+    }
+
+    const fullName = document.getElementById('full-name').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+
+    if (fullName && address && phone) {
+        alert(`Thank you, ${fullName}! Your order has been placed successfully.\n\nTotal Price: Ksh ${totalPrice.toFixed(2)}`);
+        
+        // Clear the cart after placing an order
+        cart = [];
+        totalPrice = 0;
+        updateCartDisplay(); // Update the cart display to reflect the cleared cart
+
+        // Optionally, reset the form fields
+        document.getElementById('order-form').reset();
+    } else {
+        alert("Please fill in all fields.");
+    }
+}
+</script>
+</html>
