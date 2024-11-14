@@ -1,0 +1,253 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+/* Basic styles for the cart */
+#cart {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+#cart h2 {
+    margin-bottom: 10px;
+}
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.remove-item {
+    cursor: pointer;
+    color: red;
+}
+.total-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+header {
+    background-color: #5d5d5d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Products section styles */
+#products {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    background-color: #5d5d5d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #5d5d5d;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* About Us Section Styles */
+#about {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px;             /* Inner spacing */
+    margin: 20px auto;        /* Outer spacing and centered */
+    border-radius: 8px;       /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px;         /* Maximum width for better readability */
+}
+
+#about h2 {
+    text-align: center;        /* Centered heading */
+    color: #5d5d5d;           /* Dark gray color for the heading */
+    margin-bottom: 15px;      /* Space below the heading */
+}
+
+#about p {
+    line-height: 1.6;         /* Improved line spacing for readability */
+    margin-bottom: 15px;      /* Space below each paragraph */
+    text-align: justify;      /* Justified text for a neat appearance */
+    color: #333333;           /* Darker text color for contrast */
+    font-size: 1.1em;         /* Slightly larger font size for better readability */
+}
+/* Contact Section Styles */
+#contact {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px; /* Add padding for spacing */
+    margin: 20px auto; /* Center the section */
+    max-width: 800px; /* Limit the width for better readability */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#contact h2 {
+    font-family: 'Georgia', serif; /* Elegant font style */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#contact p {
+    font-family: 'Arial', sans-serif; /* Clean font for paragraph */
+    color: #555; /* Slightly lighter text color */
+    text-align: center; /* Center the paragraph text */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+#contact-form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+label {
+    font-weight: bold; /* Bold labels for emphasis */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below input fields */
+    font-size: 16px; /* Font size for input text */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

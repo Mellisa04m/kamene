@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jewels' Jewelry Store</title>
+</head>
+<body>
+    <header>
+        <h1>Jewels' Jewelry Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/e4/a6/29/e4a6295abe03b808e5a08b401abd73f5.jpg" alt="Gold Ring">
+            <h3>Gold Ring</h3>
+            <p>Ksh 700.00</p>
+            <button onclick="addToCart('Gold Ring', Ksh 700.99)">Add to Cart</button>
+        </div>
+        <div class="product" id="product2">
+            <img src="https://i.pinimg.com/236x/94/ea/60/94ea6094531727d45b634c418afa33d7.jpg">
+            <h3>Bohemian Rope Chain Bracelet</h3>
+            <p>Ksh 299.99</p>
+            <button onclick="addToCart('Diamond Necklace', Ksh 299.99)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/2d/ed/26/2ded268d3f977b922d7926f5e115dc47.jpg" alt="">
+            <h3>Gold Rings</h3>
+            <p>Ksh 350.00</p>
+            <button onclick="addToCart('Gold Rings', Ksh 350.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/d9/7e/60/d97e600e711201920a70252e4ba39dc7.jpg" >
+            <h3>Gigi Anklet</h3>
+            <p>Ksh 2,000.00</p>
+            <button onclick="addToCart('', Ksh 2,000.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/736x/ee/46/46/ee4646ba95377cf92c0590212fc20c10.jpg" >
+            <h3>gold necklace</h3>
+            <p>Ksh 3,500.00</p>
+            <button onclick="addToCart(Ksh 3,500.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/60/79/bb/6079bb2a64fcf759be498d2b2ec1cd9f.jpg" >
+            <h3>Rose Long</h3>
+            <p>Ksh 1,500.00</p>
+            <button onclick="addToCart(Ksh 1,500.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/e2/50/c1/e250c1ebf2ad75261087bdd6fe1527c3.jpg" >
+            <h3>Perry Necklace</h3>
+            <p>Ksh 2,000.00</p>
+            <button onclick="addToCart(Ksh 2,000.00)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://i.pinimg.com/236x/7d/7d/1d/7d7d1d5058cc5a58af35410953914712.jpg" >
+            <h3>Line Drop Earing</h3>
+            <p>Ksh 2,000.00</p>
+            <button onclick="addToCart(Ksh 2,000.00)">Add to Cart</button>
+        </div>
+        
+        
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Kspamzy Jewelry Store, your premier destination for exquisite and unique jewelry pieces.</p>
+        <p>Each piece in our collection is crafted with precision and care, using the finest materials to ensure durability and elegance..</p>
+        <p>Thank you for choosing Kspamzy Jewelry Store. We look forward to helping you find the perfect piece that tells your story.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us using the form below:</p>
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Kspamzy Jewelry Store. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
